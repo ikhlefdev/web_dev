@@ -1,7 +1,7 @@
 .container{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr ;
-    grid-template-rows:repeat(4,auto);
+    grid-template-rows:10%  ;
     grid-gap: 30px;
     
     
@@ -31,19 +31,45 @@
 
 
 .annouce{
-    background-color: beige;
+    background-color: white;
     grid-row: 3/ 5;
     grid-column: 4/5;
+    margin-right: 45px;
+    border-radius: 10px;
+}
+.annoucetitle{
+    background-color: #e2e8f0;
+    border: none;
+    padding-bottom: 10px;
+}
+.annoucetext{
+    padding: 10px;
+    border-top: 10px;
 }
 .trending{
-    background-color: tomato;
+    background-color:white;
     grid-row:5/6;
     grid-column: 4/5;
+    margin-right: 45px;
+    border-radius: 10px; 
+}
+.trendtitle{
+    background-color: #e2e8f0;
+    border: none;
+    padding-bottom: 10px;
+}
+.trendtext{
+    padding: 10px;
+   
+    
+
 }
 img{
     width: 25px;
     height: auto;
-
+    position: relative;
+    top:20%;
+    left:5%;
 }
 ul{
     list-style-type: none;
@@ -52,6 +78,10 @@ ul{
 }
 li{
     padding: 5px;
+}
+li:hover , button:hover{
+    color:rgb(164, 165, 165) ;
+    cursor: pointer;
 }
 :root{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -62,11 +92,55 @@ li{
 }
 
 div[class*="project"]{
-    border: solid 1px rgb(89, 88, 88);
-    box-shadow: 0 4px 8px rgb(89, 88, 88);
+    border:  none rgb(89, 88, 88);
+    box-shadow: 0 1px 4px rgb(89, 88, 88);
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px;
 }
 body,html{
     padding: 0;
     margin:0;
 }
 
+input{
+    position: relative;
+    top: 15%;
+    left: 5%;
+    width: 500px;
+    height: 25px;
+    border-radius:60px;
+    border-style: dotted;
+    background-color: rgb(242, 242, 242);
+}
+.btn{
+    position: relative;
+    top: 5%;
+    left: 60% ;
+}
+button{
+    margin: 25px;
+    width: 85px;
+    border-radius: 70px;
+    border-style: none;
+    background-color: #1992d4;
+    color: white;
+    height: 30px;
+}
+.text{
+    position: fixed;
+    top: 60px;
+    left:30%;
+    
+}
+.text> p , .text > h4 {
+    padding: 0;
+    margin: 0;
+}
+.btn > h4{
+    position:fixed;
+    left: 89.5%;
+    top: 19px;
+    margin: 0;
+    padding: 0;
+}
