@@ -3,11 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Playwrite+CU:wght@100..400&family=Sevillana&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="library.css">
         <title>Library</title>
     </head>
     <body>
-       
-        <script src="library.js"></script>
+        <dialog>
+            <form action="" id="form">
+                <div><label for="name" id="name">Name of the book:</label>
+                    <input type="text" id="titleinp">
+                </div>
+                <div>
+                    <label for="author">Name of the author:</label>
+                    <input type="text"  id="author">
+                </div>
+                <div>
+                    <label for="pages" id="pages">Number of pages:</label>
+                <input type="number" id="pagesinp">
+                </div>
+                <div>
+                    <label for="isread">
+                        <input type="checkbox" id="isread">Read?
+                    </label>
+                </div>
+                
+                <div class="insidebtn">
+                    <button value="cancel" formmethod="dialog">Cancel</button>
+                    <button id="confirmbtn" type="submit">Confirm</button>
+                </div>
+               
+            </form>
+          </dialog>
+          <div class="container">
+            <div><h1>My Library</h1></div>
+            <div class="add-book"><button id="show" >Add a New Book</button></div>
+          </div>
+
+
+            <div class="library">
+
+            </div>
+          
+            <script src="library.js"></script>
+           
+          
+          
     </body>
 </html>
