@@ -35,21 +35,46 @@ function displayBook(){
         
     })
 }
-//problem here 
+
 document.getElementById("form").addEventListener("submit",(event)=>{
     event.preventDefault()
-    const title=document.getElementById("titleinp").value
-    const author=document.getElementById("author").value
-    const pages=document.getElementById("pagesinp").value
+    const title=document.getElementById("titleinp")
+    const author=document.getElementById("author")
+    const pages=document.getElementById("pagesinp")
     const isread=document.getElementById("isread").checked 
+    title.setCustomValidity("");
+    author.setCustomValidity("");
+    pages.setCustomValidity("");
+    
+    if (title.value.trim===""){
+        title.setCustomValidity("please enter the book's name")
+        title.reportValidity()
+        console.log("errrrror")
+        return;
+    }
+    else if(author.value.trim===""){
+        author.setCustomValidity("please enter the book's author")
+        author.reportValidity()
+        return;
+    }
+    else if (pages.value.trim===""){
+        pages.setCustomValidity("please enter the book's pages")
+        pages.reportValidity()
+        return;
+    }
+    else{
+    
 
-    const newbook= new Book(title,author,pages,isread)
+    const newbook= new Book(title.value,author.value,pages.value,isread)
     addBook(newbook)
     displayBook()
 
     dialog.close()
-    document.getElementById("form").reset()
+    document.getElementById("form").reset()}
 })
+
+
+
 
 function toggleRead() {
     isread = !isread; // Toggle the read status
